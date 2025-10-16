@@ -2,27 +2,21 @@ import java.util.Scanner;
 
 
 public class Main {
-    void main() {
+    static void main(String[] args) {
         // deklaracja zmiennych typu int
         int a, b;
 
-        IO.println("podaj a: ");
-        a = getInteger();
-        IO.println("podaj b: ");
-        b = getInteger();
+        // utworzenie obiektu Scanner dla danych wejściowych
+        Scanner input = new Scanner(System.in);
 
+        // inicjalizacja zmiennych a i b danymi wejściowymi
+        System.out.println("podaj a: ");
+        a = input.nextInt();
+        System.out.println("podaj b: ");
+        b = input.nextInt();
 
         IO.println(a + b);
-    }
-
-    int getInteger() {
-        // importowanie obiektu skanera
-        Scanner input = new Scanner(System.in);
-        // zapisanie wprowadzonej przez użytkownika liczby w zmiennej num
-        int num = input.nextInt();
-        // terminacja obiektu skanera
+        // terminacja skanera
         input.close();
-        // zwrócenie wartości wpowadzonej przez użytkownika liczby
-        return num;
     }
 }

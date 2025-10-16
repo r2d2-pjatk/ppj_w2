@@ -15,7 +15,21 @@ public class Main {
         System.out.println("podaj b: ");
         b = input.nextInt();
 
-        IO.println(a + b);
+        // deklarujemy potrzebne zmienne na zewnątrz pętli
+        int c, d;
+
+        while (true) {
+            c = a ^ b;
+            d = a & b;
+            d = d << 1;
+
+            if (d == 0) {
+                break;
+            }
+            a = c;
+            b = d;
+        }
+
         // terminacja skanera
         input.close();
     }
